@@ -1,0 +1,72 @@
+@keyframes intro-content {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes intro-header {
+  0% { transform: translateY(80px) scale(.6);}
+  100% { transform: translate(0) scale(1);}
+}
+
+@keyframes intro-para {
+  0%{ transform: translateY(-30px) scale(1.1); }
+  100% { transform: translate(0) scale(1);}
+}
+
+#bg {
+  background-image: url("https://images.unsplash.com/photo-1554129351-dd3625ed5f30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80");
+  background-size: cover;
+  opacity: 1.5;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin: 1;
+  position: fixed;
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  position: relative;
+  z-index: 10;
+  animation-name: intro-content;
+  animation-duration: 1.4s;
+  animation-delay: .1s;
+  animation-fill-mode: both;
+  h1{
+    font-size: 40px;
+    margin-bottom: px-to-rem(16px);
+    animation-name: intro-header;
+    animation-duration: 1s;
+    animation-delay: .1s;
+    color: white;
+    font-family: 'Courgette', cursive;
+  }
+  p{
+    font-size: 15px;
+    width: 40vw;
+    text-align: center;
+    line-height: 190%;
+    color: white;
+    font-family: 'Courgette', cursive;
+    animation-name: intro-para;
+    animation-duration: 1s;
+    animation-delay: .2s;
+  }
+
+  button {
+    color: #425831;
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 4px;
+    margin-top: 20px;
+    &:hover{
+      opacity: .5;
+    }
+  }
+}
